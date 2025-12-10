@@ -36,6 +36,7 @@
     "Game Maker Language": "#8fb200", 
     "Gnuplot": "#f0a9f0", 
     "Go": "#375eab", 
+    "GDScript": "#355570",
     "Groovy": "#e69f56", 
     "Haskell": "#29b544", 
     "Haxe": "#df7900", 
@@ -95,6 +96,7 @@
     "Slim": "#ff8f77", 
     "Smalltalk": "#596706", 
     "Swift": "#ffac45", 
+    "SQL": "#e38c00",
     "Tcl": "#e4cc98", 
     "TeX": "#3D6117", 
     "Turing": "#45f715", 
@@ -104,8 +106,6 @@
     "Visual Basic": "#945db7", 
     "Vue": "#2c3e50", 
     "VBA": "#867db1",
-    "Zephir": "#118f9e",
-    "SQL": "#e38c00",
-    "GDScript": "#355570",
-    "Visual Basic 6.0": "#2c6353"
+    "Visual Basic 6.0": "#2c6353",
+    "Zephir": "#118f9e"
 }
