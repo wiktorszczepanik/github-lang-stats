@@ -1,3 +1,5 @@
+COLORS = "assets/colors.json"
+
 input_values <- function() {
     input <- function(prompt_text) {
         cat(prompt_text)
@@ -47,12 +49,13 @@ get_data_frame <- function(lang_list) {
 }
 
 legend_colors <- function() {
-    my_colors <- c(
-        Python = "#377eb8",
-        SQL = "#4daf4a",
-        Java = "#e41a1c",
-        VBA = "#984ea3",
-        `Visual Basic 6.0` = "#ff7f00",
-        `C++` = "#ffff33"
-    )
+    return(fromJSON(COLORS))
+}
+
+cleaned_data_frame <- function(df) {
+    df_sorted <- df[order(df$share, decreasing = TRUE), ]
+    df_sorted$languages <- factor(df_sorted$languages, levels = df_sorted$languages)
+    df_sorted$percent <- df_sorted$share / sum(df_sorted$share)
+    df_sorted$label <- paste0(df_sorted$languages, " (", round(df_sorted$share / sum(df_sorted$share) * 100, 1), "%)")
+    return(df_sorted)
 }
