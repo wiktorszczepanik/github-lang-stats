@@ -18,14 +18,14 @@ data_frame <- get_data_frame(lang_total)
 df_sorted <- cleaned_data_frame(data_frame)
 language_colors <- legend_colors()
 
-svg("programming_languages.svg", width = 16, height = 4)
+svg("programming_languages.svg", width = 16, height = 2.5)
 
 ggplot(df_sorted, aes(x = "", y = share, fill = languages)) +
     geom_col(width = 0.2) +
     coord_flip() +
     scale_y_continuous(expand = c(0,0)) +
     scale_fill_manual(values = language_colors, labels = df_sorted$label) +
-    labs(title = "  List of programming languages", x = NULL, y = "", fill = "") +
+    labs(x = NULL, y = "", fill = "") +
     guides(fill = guide_legend(
         nrow = 2,
         byrow = TRUE,
@@ -44,7 +44,7 @@ ggplot(df_sorted, aes(x = "", y = share, fill = languages)) +
         legend.text = element_text(color = "white", size = 14),
         legend.title = element_text(color = "white"),
         plot.title = element_text(color = "white", face = "bold", size = 20, margin = margin(b = 15)),
-        plot.margin = margin(t = 25, b = 25, l = 15, r = 15),
+        plot.margin = margin(t = 20, b = 20, l = 15, r = 15),
 
         # Hide X
         axis.text.x = element_blank(),
