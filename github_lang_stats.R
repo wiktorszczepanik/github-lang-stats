@@ -18,7 +18,7 @@ data_frame <- get_data_frame(lang_total)
 df_sorted <- cleaned_data_frame(data_frame)
 language_colors <- legend_colors()
 
-svg("programming_languages.svg", width = 18.3, height = 2.7)
+svg("programming_languages.svg", width = 18.4, height = 2.7)
 
 ggplot(df_sorted, aes(x = "", y = share, fill = languages)) +
     geom_col(width = 0.5) +
